@@ -12,4 +12,4 @@ map('n', '<leader>t', '<cmd>FloatermNew<CR>', opts);
 map('n', '<leader>tv', '<cmd>FloatermNew --position=topleft --autoclose=0 ls <CR>', opts);
 
 -- nice way of finding staff in current file
-map('n', '<C-_>', '<cmd>Telescope current_buffer_fuzzy_find<CR>', opts);
+map('n', '<C-_>', '<cmd>Telescope current_buffer_fuzzy_find sorting_strategy=ascending<CR>', opts);
