@@ -10,5 +10,6 @@
         }
       }
   }
-}
+},
+"Lua.telemetry.enable": true
 }
