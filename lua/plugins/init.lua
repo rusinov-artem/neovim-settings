@@ -29,6 +29,16 @@ return require('packer').startup(function()
   -- lsp!!!
   use 'neovim/nvim-lspconfig' 
 
+  -- My Plugin
+  use '/root/plugin1.nvim'
+
+
+  -- GO debugin
+  use 'mfussenegger/nvim-dap'
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use 'leoluz/nvim-dap-go'
+
+
 
 end)
 

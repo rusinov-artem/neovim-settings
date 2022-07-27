@@ -17,3 +17,5 @@ require('lspconfig').gopls.setup{
     vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, {buffer=0})
  end,
 }
+
+
