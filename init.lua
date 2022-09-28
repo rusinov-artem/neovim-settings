@@ -1,7 +1,6 @@
 require("settings")
 
 require("plugins")
--- Plugins settins
 require("plugins-settings")
 
 require("mappings")

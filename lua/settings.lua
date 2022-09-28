@@ -19,6 +19,3 @@ set.cursorline = true
 
 set.termguicolors = true
 
-
---autoinstall plugins
-

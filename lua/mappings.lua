@@ -18,11 +18,11 @@ map('n', '<C-_>', '<cmd>Telescope current_buffer_fuzzy_find sorting_strategy=asc
 map('n', '<leader>ff', '<cmd>Telescope find_files<CR>', opts);
 
 -- debuging keymap
-map("n", "<leader>dd", ":lua require'dap'.continue()<CR>", opts)
-map("n", "<leader>di", ":lua require'dap'.step_into()<CR>", opts)
-map("n", "<leader>do", ":lua require'dap'.step_over()<CR>", opts)
-map("n", "<leader>doo", ":lua require'dap'.step_out()<CR>", opts)
-map("n", "<leader>b", ":lua require('dap').toggle_breakpoint()<CR>", opts)
-map("n", "<leader>dr", ":lua require('dap').repl.open()<CR>", opts)
+map("n",   "<leader>dd",   ":lua require'dap'.continue()<CR>",               opts)
+map("n",   "<leader>di",   ":lua require'dap'.step_into()<CR>",              opts)
+map("n",   "<leader>do",   ":lua require'dap'.step_over()<CR>",              opts)
+map("n",   "<leader>doo",  ":lua require'dap'.step_out()<CR>",               opts)
+map("n",   "<leader>b",    ":lua require('dap').toggle_breakpoint()<CR>",    opts)
+map("n",   "<leader>dr",   ":lua require('dap').repl.open()<CR>",            opts)
 
 
