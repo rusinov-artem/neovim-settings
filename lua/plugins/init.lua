@@ -27,7 +27,7 @@ return require('packer').startup(function()
   
 
   -- lsp!!!
-  use 'neovim/nvim-lspconfig' 
+  use 'neovim/nvim-lspconfig'
 
   -- My Plugin
   use '/root/plugin1.nvim'
@@ -37,6 +37,72 @@ return require('packer').startup(function()
   use 'mfussenegger/nvim-dap'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
   use 'leoluz/nvim-dap-go'
+
+
+    -- движок автодополнения для LSP
+  use 'hrsh7th/nvim-cmp'
+
+   -- парсер для всех языков программирования, цветной код как в твоем
+  -- любимом IDE
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate',
+      config = function()
+        -- так подгружается конфигурация конкретного плагина
+        -- ~/.config/nvim/lua/plugins/treesitter.lua
+        require('plugins.treesitter') 
+      end
+  }
+
+
+    -- статусбар, аналог vim-airline, только написан на lua
+  use {
+    'nvim-lualine/lualine.nvim',
+    config = function()
+      require('plugins.lualine')
+    end
+  }
+
+
+    -- движок сниппетов
+  use {
+    'L3MON4D3/LuaSnip',
+    after = 'friendly-snippets',
+    config = function()
+      require('luasnip/loaders/from_vscode').load({
+       paths = { '~/.local/share/nvim/site/pack/packer/start/friendly-snippets' }
+      })
+    end
+  }
+    
+  -- автодополнения для сниппетов
+  use 'saadparwaiz1/cmp_luasnip'
+    
+  -- набор готовых сниппетов для всех языков, включая go
+  use 'rafamadriz/friendly-snippets'
+
+
+
+    -- набор утилит для Go
+  use {
+    'olexsmir/gopher.nvim',
+    config = function()
+      require('plugins.gopher')
+    end
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

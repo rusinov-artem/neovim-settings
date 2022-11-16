@@ -18,4 +18,4 @@ set.fileencoding = 'utf-8'
 set.cursorline = true
 
 set.termguicolors = true
-
+vim.cmd('colorscheme slate')
