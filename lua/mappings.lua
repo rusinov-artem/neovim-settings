@@ -25,4 +25,4 @@ map("n",   "<leader>doo",  ":lua require'dap'.step_out()<CR>",               opt
 map("n",   "<leader>b",    ":lua require('dap').toggle_breakpoint()<CR>",    opts)
 map("n",   "<leader>dr",   ":lua require('dap').repl.open()<CR>",            opts)
 
-
+map("n",   "<leader><space>", ":nohlsearch<CR>", opts)
